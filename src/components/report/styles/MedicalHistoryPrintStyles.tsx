@@ -23,6 +23,7 @@ const MedicalHistoryPrintStyles = () => {
           color: #000;
           height: 3mm;
           line-height: 3mm;
+          margin-bottom: 7mm;
         }
 
         .history-grid {
@@ -57,9 +58,13 @@ const MedicalHistoryPrintStyles = () => {
           min-height: 10mm;
         }
 
-        /* Hide empty history items and their labels */
+        /* Hide empty history items and their labels/text */
         .history-item:empty,
         .history-item.empty-section {
+          display: none !important;
+        }
+        .history-item.empty-section > .history-label,
+        .history-item.empty-section > .history-text {
           display: none !important;
         }
       }
